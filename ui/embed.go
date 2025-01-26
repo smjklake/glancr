@@ -10,7 +10,7 @@ var embedUI embed.FS
 
 /// GetUIFS returns an embed FS for the UI components in the dist dir.
 func GetUIFS() fs.FS {
-	f, err := fs.Sub(embedUI, "build")
+	f, err := fs.Sub(embedUI, "dist")
 	if err != nil {
 		panic(err)
 	}
