@@ -1,13 +1,12 @@
-// +build !prod
+//go:build !prod
 
-package server
+package main
 
 import (
-  "io/fs"
-  "os"
+	"io/fs"
+	"os"
 )
 
 func getUIAssets() fs.FS {
-  return os.DirFS("ui/dist")
+	return os.DirFS("ui/dist")
 }
-
