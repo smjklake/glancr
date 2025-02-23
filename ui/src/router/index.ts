@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import NotFoundView from '../views/NotFoundView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import NotFoundView from '../views/NotFoundView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,11 +19,11 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: "/:catchAll(.*)",
+      path: '/:catchAll(.*)',
       name: 'not-found',
       component: NotFoundView,
     },
   ],
-})
+});
 
-export default router
+export default router;

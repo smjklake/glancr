@@ -1,6 +1,16 @@
-<script lang="ts">
+<script setup lang="ts">
+import { ref, defineAsyncComponent } from 'vue'
+
+const MonacoEditor = defineAsyncComponent(() => import('@/components/MonacoEditor.vue'))
+
+const code = ref('# Hello from markdown\n\n\t> this is a markdown note')
 </script>
 
 <template>
-  <h1 class="font-bold text-red-500">Editor Placeholder</h1>
+  <Suspense>
+    <MonacoEditor v-model="code" language="markdown" :options="{ readOnly: false }" />
+    <template #fallback>
+      <div>Loading editor...</div>
+    </template>
+  </Suspense>
 </template>
