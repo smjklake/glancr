@@ -8,5 +8,5 @@ import (
 )
 
 func getUIAssets() fs.FS {
-	return os.DirFS("internal/fs/dist")
+	return os.DirFS("ui/dist")
 }
