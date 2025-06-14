@@ -1,2 +1,2 @@
 # glancr
-A Markdown documentation viewer written in Go and Vue.
+A Markdown documentation viewer written in Go and React.

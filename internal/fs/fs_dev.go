@@ -1,6 +1,6 @@
 //go:build !prod
 
-package main
+package fs
 
 import (
 	"io/fs"
@@ -8,5 +8,5 @@ import (
 )
 
 func getUIAssets() fs.FS {
-	return os.DirFS("ui/dist")
+	return os.DirFS("internal/fs/dist")
 }

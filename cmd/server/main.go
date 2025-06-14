@@ -6,10 +6,12 @@ import (
 	"os"
 	"path"
 	"strings"
+
+	"github.com/smjklake/glancr/internal/fs"
 )
 
 func spaHandler() http.HandlerFunc {
-	fs := getUIAssets()
+	fs := fs.GetUIAssets()
 	fileServer := http.FileServer(http.FS(fs))
 
 	return func(w http.ResponseWriter, r *http.Request) {
